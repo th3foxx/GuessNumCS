@@ -1,1 +1,16 @@
-﻿17112857870752138
+def get_user_name():
+    """
+    Ask for user input and return the name.
+    """
+    user_name = input("Please enter your name: ")
+    return user_name
+
+def greet_user(name):
+    """
+    Greet the user with their name.
+    """
+    print(f"Hello, {name.title()}! Nice to meet you.")
+
+if __name__ == "__main__":
+    user_name = get_user_name()
+    greet_user(user_name)
