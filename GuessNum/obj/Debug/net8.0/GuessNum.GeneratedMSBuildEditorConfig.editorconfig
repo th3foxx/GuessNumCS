@@ -1,13 +1,22 @@
-is_global = true
-build_property.TargetFramework = net8.0
-build_property.TargetPlatformMinVersion = 
-build_property.UsingMicrosoftNETSdkWeb = 
-build_property.ProjectTypeGuids = 
-build_property.InvariantGlobalization = 
-build_property.PlatformNeutralAssembly = 
-build_property.EnforceExtendedAnalyzerRules = 
-build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = GuessNum
-build_property.ProjectDir = C:\Users\lamer\RiderProjects\GuessNum\GuessNum\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+# Set build properties for a C# project
+$build_property = @{
+    IsGlobal = $true
+    TargetFramework = 'net8.0'
+    TargetPlatformMinVersion = $null
+    UsingMicrosoftNETSdkWeb = $null
+    ProjectTypeGuids = $null
+    InvariantGlobalization = $true
+    PlatformNeutralAssembly = $true
+    EnforceExtendedAnalyzerRules = $true
+    SupportedPlatformList = 'Linux', 'macOS', 'Windows'
+    RootNamespace = 'GuessNum'
+    ProjectDir = 'C:\Users\lamer\RiderProjects\GuessNum\GuessNum\'
+    EnableComHosting = $false
+    EnableGeneratedComInterfaceComImportInterop = $false
+}
+
+# Set the values of the build properties
+foreach ($key in $build_property.Keys) {
+    Set-Item -Path "Properties\$key" -Value $build_property[$key]
+}
+
