@@ -1,14 +1,29 @@
-C:\Users\lamer\RiderProjects\GuessNum\GuessNum\bin\Debug\net8.0\GuessNum.exe
-C:\Users\lamer\RiderProjects\GuessNum\GuessNum\bin\Debug\net8.0\GuessNum.deps.json
-C:\Users\lamer\RiderProjects\GuessNum\GuessNum\bin\Debug\net8.0\GuessNum.runtimeconfig.json
-C:\Users\lamer\RiderProjects\GuessNum\GuessNum\bin\Debug\net8.0\GuessNum.dll
-C:\Users\lamer\RiderProjects\GuessNum\GuessNum\bin\Debug\net8.0\GuessNum.pdb
-C:\Users\lamer\RiderProjects\GuessNum\GuessNum\obj\Debug\net8.0\GuessNum.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\lamer\RiderProjects\GuessNum\GuessNum\obj\Debug\net8.0\GuessNum.AssemblyInfoInputs.cache
-C:\Users\lamer\RiderProjects\GuessNum\GuessNum\obj\Debug\net8.0\GuessNum.AssemblyInfo.cs
-C:\Users\lamer\RiderProjects\GuessNum\GuessNum\obj\Debug\net8.0\GuessNum.csproj.CoreCompileInputs.cache
-C:\Users\lamer\RiderProjects\GuessNum\GuessNum\obj\Debug\net8.0\GuessNum.dll
-C:\Users\lamer\RiderProjects\GuessNum\GuessNum\obj\Debug\net8.0\refint\GuessNum.dll
-C:\Users\lamer\RiderProjects\GuessNum\GuessNum\obj\Debug\net8.0\GuessNum.pdb
-C:\Users\lamer\RiderProjects\GuessNum\GuessNum\obj\Debug\net8.0\GuessNum.genruntimeconfig.cache
-C:\Users\lamer\RiderProjects\GuessNum\GuessNum\obj\Debug\net8.0\ref\GuessNum.dll
+using System;
+
+namespace GuessNum
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random random = new Random();
+            int randomNumber = random.Next(1, 101);
+            int attempts = 0;
+
+            Console.WriteLine("Guess a number between 1 and 100.");
+
+            while (true)
+            {
+                string input = Console.ReadLine();
+                int guess;
+
+                if (int.TryParse(input, out guess))
+                {
+                    attempts++;
+
+                    if (guess < randomNumber)
+                    {
+                        Console.WriteLine("Too low! Try again.");
+                    }
+                    else if (guess > randomNumber)
+                
