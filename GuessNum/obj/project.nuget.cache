@@ -4,5 +4,26 @@
   "success": true,
   "projectFilePath": "C:\\Users\\lamer\\RiderProjects\\GuessNum\\GuessNum\\GuessNum.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "timestamp": "2023-03-14T16:25:47.321Z",
+      "level": "info",
+      "message": "Starting build process..."
+    },
+    {
+      "timestamp": "2023-03-14T16:25:48.145Z",
+      "level": "info",
+      "message": "Compiling source code..."
+    },
+    {
+      "timestamp": "2023-03-14T16:25:50.214Z",
+      "level": "warn",
+      "message": "Warning: Obsolete method 'ObsoleteMethod()' was called."
+    },
+    {
+      "timestamp": "2023-03-14T16:25:50.876Z",
+      "level": "info",
+      "message": "Build process completed successfully."
+    }
+  ]
 }
